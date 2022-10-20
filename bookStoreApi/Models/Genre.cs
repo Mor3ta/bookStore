@@ -3,16 +3,15 @@ using System.Collections.Generic;
 
 namespace bookStoreApi.Models
 {
-    public partial class Author
+    public partial class Genre
     {
-        public Author()
+        public Genre()
         {
             Books = new HashSet<Book>();
         }
 
-        public int IdAuthor { get; set; }
-        public string? Name { get; set; }
-        public string? Bio { get; set; }
+        public int IdGenre { get; set; }
+        public string? Genre1 { get; set; }
 
         public virtual ICollection<Book> Books { get; set; }
     }

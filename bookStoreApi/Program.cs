@@ -1,4 +1,5 @@
-using booksContext.Models;
+
+using bookStoreApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true).AddNewtonsoftJson();
-builder.Services.AddDbContext<BooksContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("BooksContext")));
+builder.Services.AddDbContext<bookStoreContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("bookStoreContext")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
