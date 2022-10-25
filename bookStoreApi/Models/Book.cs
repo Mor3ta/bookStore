@@ -13,7 +13,6 @@ namespace bookStoreApi.Models
         public int IdGenre { get; set; }
         public int? Pages { get; set; }
         public int IdAuthor { get; set; }
-
         public virtual Author IdAuthorNavigation { get; set; } = null!;
         public virtual Genre IdGenreNavigation { get; set; } = null!;
     }

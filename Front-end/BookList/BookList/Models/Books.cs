@@ -2,7 +2,6 @@
 {
     public class Books
     {
-
         public int idBooks { get; set; }
         public string title { get; set; }
         public string description { get; set; }
