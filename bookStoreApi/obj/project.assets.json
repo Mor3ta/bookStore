@@ -2377,26 +2377,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucero.concepcion\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\Lucero\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucero.concepcion\\Desktop\\bookStoreApi\\bookStoreApi\\bookStoreApi.csproj",
+      "projectUniqueName": "C:\\Users\\Lucero\\Desktop\\bookStore\\bookStoreApi\\bookStoreApi.csproj",
       "projectName": "bookStoreApi",
-      "projectPath": "C:\\Users\\lucero.concepcion\\Desktop\\bookStoreApi\\bookStoreApi\\bookStoreApi.csproj",
-      "packagesPath": "C:\\Users\\lucero.concepcion\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucero.concepcion\\Desktop\\bookStoreApi\\bookStoreApi\\obj\\",
+      "projectPath": "C:\\Users\\Lucero\\Desktop\\bookStore\\bookStoreApi\\bookStoreApi.csproj",
+      "packagesPath": "C:\\Users\\Lucero\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucero\\Desktop\\bookStore\\bookStoreApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lucero.concepcion\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Lucero\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2464,7 +2461,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QtRkyQXkViTvdSx1KI6+eZnrzfARG8uNZX4XGxxildu8ezCSTeKNXsW6hIdjTNniT1z8MfDaL8zSp1z1Wvk5Vg==",
+  "dgSpecHash": "Ub+ZNlJz3H45SHQuDo2ITZcqkoSD6O+QADzIYqBqvYJjQ4olfhuLNBrneI7tCRPTtXWuOSlZ7wVTeDf5xEKHLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucero.concepcion\\Desktop\\BookList\\BookList\\BookList.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Lucero\\Desktop\\bookStore\\Front-end\\BookList\\BookList\\BookList.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucero\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
