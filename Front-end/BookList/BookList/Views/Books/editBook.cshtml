@@ -1,0 +1,57 @@
+﻿@model Books
+@{
+    Layout = "_Layout";
+}
+
+
+    @{
+        var book = ViewBag.Book;
+
+    }
+    <form asp-controller="Books" asp-action="editBook" id="editBook" method="put">
+        <div class="form-group m-2">
+  
+            <label for="titleInput">Title</label>
+            <input type="text" class="form-control" asp-for="title" value=@book.title placeholder="Book Title">
+        </div>
+        <div class="form-group m-2">
+            <label for="descriptionInput">Description</label>
+            <input type="text" class="form-control" asp-for="description" value=@book.description placeholder="Book Description">
+        </div>
+        <div class="form-group m-2">
+            <label for="sinopsisInput">Sinopsis</label>
+            <textarea type="text" class="form-control" value=@book.sinopsis asp-for="sinopsis" placeholder="Book Sinopsis"> </textarea>
+        </div>
+
+        <div class="form-group m-2">
+            <select class="form-select" asp-for="idGenre">
+                <option selected>Genre</option>
+                @foreach (var genre in ViewBag.genre)
+                {
+                    <option value="@genre.idGenre">@genre.genre1 </option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group m-2">
+            <label for="idiomInput">Language</label>
+            <input type="text" class="form-control" value=@book.idiom asp-for="idiom" placeholder="Book language">
+        </div>
+
+        <div class="form-group m-2">
+            <label for="pagesInput">Pages</label>
+            <input type="text" class="form-control" value=@book.pages asp-for="pages" placeholder="Book pages">
+        </div>
+
+        <div class="form-group m-2">
+            <select class="form-select" asp-for="idAuthor">
+                <option selected> Authors</option>
+                @foreach (var author in ViewBag.author)
+                {
+                    <option value="@author.idAuthor">@author.name</option>
+                }
+            </select>
+        </div>
+    <input type="submit" asp-controller="Books" asp-action="editBook"  asp-route-idBook="@book.idBooks" />
+</form>
+
