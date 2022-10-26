@@ -2,21 +2,21 @@
 @{
     Layout = "_Layout";
 }
-<form asp-controller="Books" asp-action="newBook" id="newBook" method="post">
-    <div class="form-group">
+<form class="col-6" asp-controller="Books" asp-action="newBook" id="newBook" method="post">
+    <div class="form-group mt-2">
         <label for="titleInput">Title</label>
-        <input type="text" class="form-control" asp-for= "title"  placeholder="Book Title">
+        <input type="text" class="form-control" asp-for="title" placeholder="Book Title">
     </div>
-    <div class="form-group">
+    <div class="form-group mt-2">
         <label for="descriptionInput">Description</label>
-        <input type="text" class="form-control" asp-for ="description" placeholder="Book Description">
+        <input type="text" class="form-control" asp-for="description" placeholder="Book Description">
     </div>
-    <div class="form-group">
+    <div class="form-group mt-2">
         <label for="sinopsisInput">Sinopsis</label>
         <textarea type="text" class="form-control" asp-for="sinopsis" placeholder="Book Sinopsis"> </textarea>
     </div>
 
-    <div class="form-group">
+    <div class="form-group mt-2">
         <select class="form-select" asp-for="idGenre">
             <option selected>Genre</option>
             @foreach (var genre in ViewBag.genre)
@@ -26,20 +26,20 @@
         </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group mt-2">
         <label for="idiomInput">Language</label>
         <input type="text" class="form-control" asp-for="idiom" placeholder="Book language">
     </div>
 
-    <div class="form-group">
+    <div class="form-group mt-2">
         <label for="pagesInput">Pages</label>
         <input type="text" class="form-control" asp-for="pages" placeholder="Book pages">
     </div>
-   
-    <div class="form-group">
+
+    <div class="form-group mt-2">
         <select class="form-select" asp-for="idAuthor">
             <option selected> Authors</option>
-            @foreach ( var author in ViewBag.author)
+            @foreach (var author in ViewBag.author)
             {
                 <option value="@author.idAuthor" selected>@author.name</option>
             }
