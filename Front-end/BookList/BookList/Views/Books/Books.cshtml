@@ -11,31 +11,39 @@
         @{
             var books = ViewBag.book_list;
             var authors = ViewBag.author;
-
-
+            var genres = ViewBag.genre;
             foreach(var book in books ){
-                foreach (var author in authors)
-                {
                 <div class="card" style="width: 18rem; mr-5">
                     <img class="card-img-top" src="./images/matilda.jpg" alt="Card image cap">
                     <div class="card-body">
-                    <h4>@book.title</h4>
-                   
-                        @if (@authors.idAuthor == @book.idAuthor)
-                        {
-                            <span> Author: @authors.name</span>
-                        }
-                   
+                        <h4>@book.title</h4>
+                        @{
+                            foreach (var author in authors)
+                            {
+                                @if (@author.idAuthor == @book.idAuthor)
+                                {
+                                    <span class="badge bg-info text-dark"> Author: @author.name</span>
+                                }
+                            }
+                         }
 
+                        @{
+                            foreach (var genre in genres)
+                            {
+                                @if (@genre.idGenre == @book.idGenre)
+                                {
+                                <span class="badge bg-light text-dark">@genre.genre1</span>
+                                }
+                            }
+                    }
+                        <span class="badge bg-dark">@book.pages</span>
+                        <span class="badge bg-light text-dark"> @book.idiom</span>
                         <p class="card-text">
                             @book.description
                         </p>
-                        
-                       
+                        <a asp-controller="Books" asp-action="book" asp-route-id="@book.idBooks">Leer Mas</a>
                     </div>
                 </div>
-
-                }
             }
         }
         </div>

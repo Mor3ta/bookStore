@@ -6,6 +6,7 @@ using static BookList.Models.Books;
 using System.Text.Json;
 using System.IO;
 
+
 namespace BookList.Controllers
 {
     public class BooksController : Controller
@@ -93,8 +94,21 @@ namespace BookList.Controllers
 
             return View();
         }
+        [Route("Book/book/{id}")]
+        public async Task<ActionResult> book(int id)
+        {
+            var cliente = new HttpClient();
+            cliente.BaseAddress = new Uri("https://localhost:7264");
+            var book_response = await cliente.GetAsync($"api/books/{id}");
+            if (book_response.IsSuccessStatusCode)
+            {
+                var json_book_response = await book_response.Content.ReadAsStringAsync();
+                ViewBag.book = JsonSerializer.Deserialize<Books>(json_book_response); ;
 
-
+                return View();
+            }
+                return View();
+        }
 
 
 
